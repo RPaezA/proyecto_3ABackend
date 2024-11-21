@@ -13,6 +13,9 @@ export  const databaseProvider=[
                 username:config.get('USERNAME'),
                 password:config.get('PASSWORD_DB'),
                 database:config.get('DATABASE'),
+                entities: [
+                    __dirname + '/../**/*.entity{.ts,.js}',
+                ],
 
             });
             return dataSource.initialize();
